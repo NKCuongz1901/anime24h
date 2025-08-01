@@ -1,0 +1,22 @@
+.ad-banner-fixed {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  width: 160px;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none; /* Để không che các nút khác */
+}
+
+.ad-banner-inner {
+  width: 160px;
+  height: 300px;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: auto; /* Cho phép click vào quảng cáo */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+} 

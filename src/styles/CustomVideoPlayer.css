@@ -1,0 +1,159 @@
+.custom-player-container {
+  width: 100%;
+  background: #111;
+  position: relative;
+}
+.custom-progress-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 2rem 0.2rem 2rem;
+}
+.custom-time {
+  color: #fff;
+  font-size: 1rem;
+  min-width: 56px;
+  text-align: center;
+}
+.custom-time.duration {
+  text-align: right;
+}
+.progress-bar {
+  flex: 1;
+  margin: 0 1.2rem;
+  accent-color: #ffe082;
+  height: 4px;
+}
+.custom-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem 1.1rem 2rem;
+}
+.custom-controls-left, .custom-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.volume-bar {
+  width: 100px;
+  accent-color: #ffe082;
+  height: 4px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.icon-btn:hover {
+  background: #ffe08222;
+  color: #ffe082;
+}
+button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+button:active {
+  color: #ffe082;
+}
+.settings-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.settings-menu {
+  position: absolute;
+  right: 0;
+  bottom: 54px;
+  min-width: 170px;
+  background: #23242a;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #000a;
+  z-index: 10;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+.settings-section {
+  margin-bottom: 1.1rem;
+}
+.settings-section:last-child {
+  margin-bottom: 0;
+}
+.settings-label {
+  font-size: 0.98rem;
+  color: #ffe082;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.settings-option {
+  background: #181a20;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  width: 100%;
+  text-align: center;
+}
+.settings-option.active, .settings-option:hover {
+  background: #ffe082;
+  color: #222;
+}
+.custom-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: rgba(24,26,32,0.72);
+  backdrop-filter: blur(8px);
+  padding: 0.05rem 0.8rem 0.2rem 0.8rem;
+  border-radius: 0 0 18px 18px;
+  color: #fff;
+  box-shadow: 0 2px 12px #0008;
+}
+.loading-spinner {
+  border: 4px solid rgba(255, 224, 130, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffe082;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ẩn scrollbar cho mọi trình duyệt hiện đại */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Đảm bảo custom controls luôn hiển thị khi fullscreen */
+.custom-player-container:fullscreen .custom-controls,
+.custom-player-container:-webkit-full-screen .custom-controls {
+  display: flex !important;
+  z-index: 1000;
+} 
